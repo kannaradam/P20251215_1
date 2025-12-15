@@ -12,12 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NUnit.Framework;
+using NUnit;
 
 namespace P20251215_1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,11 +28,19 @@ namespace P20251215_1
             InitializeComponent();
         }
 
-        private void szamol_Click(object sender, RoutedEventArgs e)
+        public void szamol_Click(object sender, RoutedEventArgs e)
         {
             DateTime date = DateTime.Now;
-            szulev.Content = $"Születési éved:  { date.Year - Convert.ToInt16(eletkor.Text)}";
+            szulev.Content = $"Születési éved:  {date.Year - Convert.ToInt16(eletkor.Text)}";
 
+        }
+        public class test
+        {
+            [Test]
+            public void Test()
+            {
+                Assert.Equals(100, date.Year - Convert.ToInt16(eletkor.Text));
+            }
         }
     }
 }
