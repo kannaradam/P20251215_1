@@ -34,9 +34,10 @@ namespace P20251215_1
             szulev.Content = $"Születési éved:  {date.Year - Convert.ToInt16(eletkor.Text)}";
 
         }
+        [TestClass]
         public class test
         {
-            [Test]
+            [TestMethod]
             public void Test()
             {
                 Assert.Equals  (100, 100);
