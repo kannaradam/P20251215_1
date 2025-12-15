@@ -20,8 +20,8 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Label Content="Kérem az életkorodat!" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontFamily="Arial"/>
-        <Label Content="" Grid.Row="2" Grid.Column="1" FontSize="18"/>
+        <Label x:Name="szulev" Content="" Grid.Row="2" Grid.Column="1" FontSize="18"/>
         <TextBox x:Name="eletkor" Height="40" Width="150" Grid.Column="2" Grid.Row="1"/>
-        <Button x:Name="szamol" Grid.Column="2" Grid.Row="2" Content="Szamol" Height="40" Width="150" FontSize="16"/>
+        <Button x:Name="szamol" Grid.Column="2" Grid.Row="2" Content="Szamol" Height="40" Width="150" FontSize="16" Click="szamol_Click"/>
     </Grid>
 </Window>
